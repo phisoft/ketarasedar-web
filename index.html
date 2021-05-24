@@ -37,14 +37,14 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Laman Utama</a></li>
-          <li><a class="nav-link scrollto" href="#about">Profil Kami</a></li>
+          <li><a class="nav-link scrollto" href="#about">Profil APAM</a></li>
           <li><a class="nav-link scrollto" href="#objectives">Matlamat</a></li>
-          <li class="dropdown"><a href="#"><span>Program</span> <i class="bi bi-caret-down-fill dropdown-icon"></i></a>
+          <li class="dropdown"><a class="nav-link scrollto" href="#programmes"><span>Program</span> <i class="bi bi-caret-down-fill dropdown-icon"></i></a>
             <ul>
-              <li><a href="#">BERASASKAN KESEDARAN MINDA (MINDFULNESS)</a></li>
-              <li><a href="#">Berasaskan Prinsip "Motivational Interviewing"</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
+              <li><a href='#'>BERASASKAN KESEDARAN MINDA (MINDFULNESS)</a></li>
+              <li><a href='#'>Meningkatkan Kesedaran Tentang Alkohol</a></li>
+              <li><a href="#">Tindakan Komuniti terhadap Alkohol</a></li>
+              <li><a href="#">Program Bersepadu untuk Pelatih-Pelatih dalam Kemahiran Alkohol untuk Pemberdayaan Masyarakat</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#contact">Hubungi Kami</a></li>
@@ -57,12 +57,59 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+    <!-- <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
       <h1>Persatuan Pencegahan Penyalahgunaan Alkohol<br/>
         Association for The Prevention of Alcohol Misuse (APAM) <br/></h1>
       <a href="#about" class="btn-get-started scrollto">Lanjut</a>
+    </div> -->
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url(assets/img/hero2.png);">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+              <h2>Persatuan Pencegahan Penyalahgunaan Alkohol</h2>
+              <div class="text-center"><a class="btn-get-started scrollto" href="#about">Baca Seterusnya</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url(assets/img/hero3.png);">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+              <h2>Persatuan Pencegahan Penyalahgunaan Alkohol</h2>
+              <div class="text-center"><a href="#about" class="btn-get-started">Baca Seterusnya</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url(assets/img/hero1.png);">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+              <h2>Persatuan Pencegahan Penyalahgunaan Alkohol</h2>
+              <div class="text-center"><a href="#about" class="btn-get-started">Baca Seterusnya</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-  </section><!-- End Hero -->
+  </section>
+  <!-- End Hero -->
 
   <main id="main">
 
@@ -101,21 +148,21 @@
         <div class="row">
           <div class="col-lg-12 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up">
             <div class="icon-box">
-              <img src="assets/img/objektif_1_logo.png" class="icon" alt="">
+              <div class="icon"><i class="bx bxs-info-circle"></i></div>
               <h4>Memberikan pengetahuan dan maklumat kepada masyarakat tentang kemudaratan alkohol</h4>
             </div>
           </div>
 
           <div class="col-lg-12 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="150">
             <div class="icon-box">
-              <img src="assets/img/objektif_2_logo.png" class="icon" alt="">
+              <div class="icon"><i class="bx bxs-user-voice"></i></div>
               <h4>Bertindak sebagai kumpulan yang memberikan advokasi kepada masyarakat untuk mengawal penyalahgunaan alkohol</h4>
             </div>
           </div>
 
           <div class="col-lg-12 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
             <div class="icon-box">
-              <img src="assets/img/objektif_3_logo.png" class="icon" alt="">
+              <div class="icon"><i class="bx bxs-info-circle"></i></div>
               <h4>Bertindak sebagai sebuah kumpulan intevensi dan sokongan kepada individu, keluarga dan masyarakat yang mengalami masalah yang berkaitan dengan penyalahgunaan alkohol</h4>
             </div>
           </div>
@@ -123,6 +170,105 @@
 
       </div>
     </section><!-- End Objectives Section -->
+
+    <!-- ======= Programmes Section ======= -->
+    <section id="programmes" class="programmes">
+      <div class="container">
+        <ul class="nav nav-tabs row d-flex">
+          <li class="nav-item col-3" data-aos="zoom-in">
+            <a id="tab1" class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
+              <h4 class="d-none d-lg-block">BERASASKAN KESEDARAN MINDA (MINDFULNESS)</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
+            <a id="tab2" class="nav-link" data-bs-toggle="tab" href="#tab-2">
+              <h4 class="d-none d-lg-block">Meningkatkan Kesedaran Tentang Alkohol</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="200">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
+              <h4 class="d-none d-lg-block">Tindakan Komuniti terhadap Alkohol</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="300">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
+              <h4 class="d-none d-lg-block">Program Bersepadu untuk Pelatih-Pelatih dalam Kemahiran Alkohol untuk Pemberdayaan Masyarakat</h4>
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content" data-aos="fade-up">
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Apa itu kesedaran minda?</h3>
+                <ul>
+                    <li><i class="bi bi-check2-all"></i> Kebolehan untuk membawa diri sendiri dan fikiran diri sendiri kembali ke masa kini/sekarang</li>
+                    <li><i class="bi bi-check2-all"></i> Mengajar kebolehan berfikir dengan lebih:
+                    <ul>
+                        <li><i class="bi bi-dot dot-padding"></i> Fleksibel</li>
+                        <li><i class="bi bi-dot dot-padding"></i> Terbuka kepada pengalaman baru</li>
+                        <li><i class="bi bi-dot dot-padding"></i> Lebih bersimpati terhadap diri sendiri</li>
+                        <li><i class="bi bi-dot dot-padding"></i> Meneroka pengalaman dalaman diri sendiri</li>
+                    </ul>
+                    </li>
+                    <li><i class="bi bi-check2-all"></i> Biasanya melibatkan latihan pernafasan</li>
+                    <li><i class="bi bi-check2-all"></i> Boleh juga dibuat dengan cara lain</li>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/p1.PNG" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-2">
+            <div class="row">
+              <div class="col-lg-4 order-2 order-lg-1">
+                <img src="assets/img/p2_1.png" alt="" class="img-fluid">
+              </div>
+              <div class="col-lg-4 order-1 order-lg-2 text-center">
+                <img src="assets/img/p2_2.png" alt="" class="img-fluid">
+              </div>
+              <div class="col-lg-4 order-1 order-lg-3 text-center">
+                <img src="assets/img/p2_3.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Objektif</h3>
+                <p>Memperkenalkan dan mengajar cara untuk membantu komuniti yang menghadapi ketagihan atau masalah terhadap Alkohol</p>
+                <h4> Buku ada Lima Bab dalam Dua Bahasa</h4>
+                <h5>Bab 1: Pengenalan</h5>
+                <h5>Bab 2: Kemahiran asas</h5>
+                <h5>Bab 3: Prinsip-prinsip Temuduga Motivasi</h5>
+                <h5>Bab 4: Kemahiran dari Acceptance and Commitment Therapy (ACT)</h5>
+                <h5>Bab 5: Bekerjasama dengan orang lain, etika dan merujuk</h5>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/p3_1.PNG" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-4">
+            <div class="row">
+              <div class="col-lg-12 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Objektif</h3>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> Menggalakkan minum yang bertanggungjawab</li>
+                  <li><i class="bi bi-check2-all"></i> Meningkatkan pengetahuan dan kemahiran mengenai pengurangan bahaya alkohol</li>
+                  <li><i class="bi bi-check2-all"></i> Mendorong kreativiti dan kemahiran keusahawanan</li>
+                  <li><i class="bi bi-check2-all"></i> Memperkasa penduduk kampung meningkatkan sokongan kendiri untuk program mengurangkan kemudaratan alkohol</li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/features-4.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Features Section -->
 
 
     <!-- ======= Contact Section ======= -->
