@@ -1,4 +1,31 @@
 /*--------------------------------------------------------------
+# Top Bar
+--------------------------------------------------------------*/
+#topbar {
+  background: #191919;
+  font-size: 15px;
+  height: 40px;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+#topbar .contact-info  {
+  margin-left: auto !important;
+}
+
+#topbar .contact-info a {
+  line-height: 0;
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+  padding-right: 20px;
+}
+
+#topbar .contact-info a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+/*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
@@ -110,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: rgba(25, 25, 25, 0.95);
+  background: rgb(249,247,250);
   transition: all 0.5s;
   z-index: 997;
   height: 70px;
@@ -140,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .scrolled-offset {
-  margin-top: 70px;
+  margin-top: 0px;
 }
 
 /*--------------------------------------------------------------
@@ -704,6 +731,7 @@ section {
     line-height: 1;
     font-size: 36px;
   }
+
 }
 
 @media (max-width: 575px) {
@@ -748,8 +776,13 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact {
+  background: lightgray;
+}
+
 .contact .info-box {
   color: #444444;
+  background: rgb(249,247,250);
   text-align: center;
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
   padding: 20px 0 30px 0;

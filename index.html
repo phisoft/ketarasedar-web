@@ -29,6 +29,16 @@
 </head>
 
 <body>
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center d-md-block">
+        <a href="#" onclick="changeLanguageByButtonClicktoMs()" class="ms" translate="no" alt="Bahasa Melayu" title="Bahasa Melayu">Melayu</a>
+        <a href="#" onclick="changeLanguageByButtonClicktoEn()" class="en" translate="no" alt="English" title="English">English</a>
+      </div>
+    </div>
+  </section>
+  
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
@@ -41,10 +51,10 @@
           <li><a class="nav-link scrollto" href="#objectives">Matlamat</a></li>
           <li class="dropdown"><a class="nav-link scrollto" href="#programmes"><span>Program</span> <i class="bi bi-caret-down-fill dropdown-icon"></i></a>
             <ul>
-              <li><a href='#'>BERASASKAN KESEDARAN MINDA (MINDFULNESS)</a></li>
-              <li><a href='#'>Meningkatkan Kesedaran Tentang Alkohol</a></li>
-              <li><a href="#">Tindakan Komuniti terhadap Alkohol</a></li>
-              <li><a href="#">Program Bersepadu untuk Pelatih-Pelatih dalam Kemahiran Alkohol untuk Pemberdayaan Masyarakat</a></li>
+              <li><a href="#programmes">BERASASKAN KESEDARAN MINDA (MINDFULNESS)</a></li>
+              <li><a href="#programmes">Meningkatkan Kesedaran Tentang Alkohol</a></li>
+              <li><a href="#programmes">Tindakan Komuniti terhadap Alkohol</a></li>
+              <li><a href="#programmes">Program Bersepadu untuk Pelatih-Pelatih dalam Kemahiran Alkohol untuk Pemberdayaan Masyarakat</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#contact">Hubungi Kami</a></li>
@@ -84,7 +94,7 @@
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>Persatuan Pencegahan Penyalahgunaan Alkohol</h2>
-              <div class="text-center"><a href="#about" class="btn-get-started">Baca Seterusnya</a></div>
+              <div class="text-center"><a href="#about" class="btn-get-started scrollto">Baca Seterusnya</a></div>
             </div>
           </div>
         </div>
@@ -94,7 +104,7 @@
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>Persatuan Pencegahan Penyalahgunaan Alkohol</h2>
-              <div class="text-center"><a href="#about" class="btn-get-started">Baca Seterusnya</a></div>
+              <div class="text-center"><a href="#about" class="btn-get-started scrollto">Baca Seterusnya</a></div>
             </div>
           </div>
         </div>
@@ -162,7 +172,7 @@
 
           <div class="col-lg-12 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
             <div class="icon-box">
-              <div class="icon"><i class="bx bxs-info-circle"></i></div>
+              <div class="icon"><i class="bx bxs-group"></i></div>
               <h4>Bertindak sebagai sebuah kumpulan intevensi dan sokongan kepada individu, keluarga dan masyarakat yang mengalami masalah yang berkaitan dengan penyalahgunaan alkohol</h4>
             </div>
           </div>
@@ -173,15 +183,19 @@
 
     <!-- ======= Programmes Section ======= -->
     <section id="programmes" class="programmes">
+      <div class="section-title">
+        <span>Program-program yang ditawarkan</span>
+        <h2>Program-program yang ditawarkan</h2>
+      </div>
       <div class="container">
         <ul class="nav nav-tabs row d-flex">
           <li class="nav-item col-3" data-aos="zoom-in">
-            <a id="tab1" class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
+            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
               <h4 class="d-none d-lg-block">BERASASKAN KESEDARAN MINDA (MINDFULNESS)</h4>
             </a>
           </li>
           <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
-            <a id="tab2" class="nav-link" data-bs-toggle="tab" href="#tab-2">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
               <h4 class="d-none d-lg-block">Meningkatkan Kesedaran Tentang Alkohol</h4>
             </a>
           </li>
@@ -336,7 +350,7 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#hero">Laman Utama</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#about">Profil Kami</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#objectives">Matlamat</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Program</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#programmes">Program</a></li>
             </ul>
           </div>
 
@@ -367,6 +381,48 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <div id="google_translate_element" style="display:none"></div>
+
 </body>
+
+<script type="text/javascript">
+
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: "ms"}, 'google_translate_element');
+  }
+  
+  function changeLanguageByButtonClicktoMs() {
+    var language = "ms";
+    var selectField = document.querySelector("#google_translate_element select");
+    for(var i=0; i < selectField.children.length; i++){
+      var option = selectField.children[i];
+      // find desired langauge and change the former language of the hidden selection-field 
+      if(option.value==language){
+         selectField.selectedIndex = i;
+         // trigger change event afterwards to make google-lib translate this side
+         selectField.dispatchEvent(new Event('change'));
+         break;
+      }
+    }
+  }
+
+  function changeLanguageByButtonClicktoEn() {
+    var language = "en";
+    var selectField = document.querySelector("#google_translate_element select");
+    for(var i=0; i < selectField.children.length; i++){
+      var option = selectField.children[i];
+      // find desired langauge and change the former language of the hidden selection-field 
+      if(option.value==language){
+         selectField.selectedIndex = i;
+         // trigger change event afterwards to make google-lib translate this side
+         selectField.dispatchEvent(new Event('change'));
+         break;
+      }
+    }
+  }
+
+</script>
+  
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </html>
