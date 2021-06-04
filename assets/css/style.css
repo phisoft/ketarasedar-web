@@ -803,11 +803,16 @@ section {
   margin: 10px 0;
 }
 
-.contact .info-box p {
+.contact .info-box a {
   padding: 0;
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  color: #444444;
+}
+
+.contact .info-box a:hover {
+  color: rgb(204, 22, 22);
 }
 
 @-webkit-keyframes animate-loading {
