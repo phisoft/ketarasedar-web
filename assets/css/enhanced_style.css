@@ -174,11 +174,13 @@
 }
 
 .programmes .nav-link {
-  display: flex;
+  display: inline-flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: auto;
+  margin: 6px;
   align-items: center;
   min-height: 160px;
+  
 }
 .programmes .nav-link.active {
   color: white;
@@ -215,7 +217,21 @@
   height: 100%;
 }
 
-@media (max-width: 990px) {
+.programmes .desktop-show {
+  display: block;
+}
+
+.programmes .mobile-show {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .programmes .mobile-show {
+    display: block;
+  }
+  .programmes .desktop-show {
+    display: none;
+  }
   .programmes .nav-link h4 {
     font-size: 12px;
   }

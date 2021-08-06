@@ -719,9 +719,9 @@ section {
 }
 
 .programmes .nav-link h4 {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0;
+  font-size: 2.5vw;
+  font-weight: 500;
+  margin: 1;
 }
 
 .programmes .nav-link:hover {
