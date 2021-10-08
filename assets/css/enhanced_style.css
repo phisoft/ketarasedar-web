@@ -172,6 +172,26 @@
   box-shadow: 0 16px 40px rgba(112, 144, 176, 0.25);
   transition: 0.3s ease-in-out;
 }
+.programmes .programme-box h4 {
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.programmes .nav-tabs{
+  display: flex;
+  
+}
+.programmes .nav-tabs li {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.programmes .nav-tabs li  a {
+  flex: 1;
+}
 
 .programmes .nav-link {
   display: inline-flex;
