@@ -23,13 +23,24 @@
   -webkit-backdrop-filter: blur(5px);
   border: none;
   position: relative;
-  height: 100px;
+  height: 160px;
   padding: 30px;
+}
+
+@media (min-width:991px) {
+  #hero .carousel-content {
+    -webkit-backdrop-filter: blur(5px);
+    border: none;
+    position: relative;
+    height: 100px;
+    padding: 30px;
+  }
+  
 }
 
 #hero .btn-get-started {
   transition: 0.2s ease-in-out;
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -41,8 +52,26 @@
   font-size: 15px;
   padding: 12px;
   border: none;
-
   transition: 0.3s ease-in-out;
+}
+
+@media (min-width:991px) {
+  #hero .btn-get-started {
+    transition: 0.2s ease-in-out;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    background-color: #1bbd36;
+    bottom: -30px;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 12px;
+    border: none;
+    transition: 0.3s ease-in-out;
+  }
 }
 
 #hero .btn-get-started:hover {
