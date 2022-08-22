@@ -296,12 +296,23 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #fff;
+  color: black;
   font-size: 28px;
   cursor: pointer;
   display: none;
   line-height: 0;
   transition: 0.5s;
+}
+
+@media (min-width:991px) {
+  .mobile-nav-toggle {
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+  }
 }
 
 .mobile-nav-toggle.bi-x {
@@ -426,13 +437,26 @@ h6 {
 
 #hero .carousel-container {
   display: flex;
-  align-items: flex-end;
+  align-items: end;
   justify-content: center;
   position: absolute;
   bottom: 150px;
   top: 10px;
   left: 55px;
   right: 55px;
+}
+
+@media (min-width:991px) {
+  #hero .carousel-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    bottom: 150px;
+    top: 10px;
+    left: 55px;
+    right: 55px;
+  }
 }
 
 #hero .carousel-content {
