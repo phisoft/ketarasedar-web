@@ -721,7 +721,106 @@ section {
 /*--------------------------------------------------------------
 # Ketara Sedar
 --------------------------------------------------------------*/
+.sedar .courses-slider {
+  width: 100%;
+  max-width: 400px; /* set a maximum width to limit the size of the slider */
+  margin: 0 auto; /* center the slider horizontally */
+}
 
+.sedar .courses-carousel {
+  width: 100%;
+  max-width: 250px; /* set a maximum width to limit the size of the carousel */
+  margin: 0 auto; /* center the carousel horizontally */
+}
+
+
+.sedar .courses-item {
+  text-align: center;
+  color: #fff;
+}
+
+.sedar .courses-item .courses-img {
+  width: 100px;
+  border: 6px solid rgba(255, 255, 255, 0.15);
+  margin: 0 auto;
+}
+
+.courses-img {
+  width: 60%;
+  height: auto;
+}
+
+
+.sedar .courses-item h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #fff;
+}
+
+.sedar .courses-item h4 {
+  font-size: 14px;
+  color: #ddd;
+  margin: 0 0 15px 0;
+}
+
+.sedar .courses-item .quote-icon-left,
+.sedar .courses-item .quote-icon-right {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 26px;
+}
+
+.sedar .courses-item .quote-icon-left {
+  display: inline-block;
+  left: -5px;
+  position: relative;
+}
+
+.sedar .courses-item .quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  top: 10px;
+}
+
+.sedar .courses-item p {
+  font-style: italic;
+  margin: 0 auto 15px auto;
+  color: #eee;
+}
+
+@media (min-width: 992px) {
+  .courses .courses-item p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-img {
+    width: 100%;
+  }
+}
+.sedar .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.sedar .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #a1bdd1;
+  opacity: 0.5;
+}
+
+.sedar .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #39718d;
+  opacity: 1;
+}
+
+.courses-img {
+  width: 60%;
+  height: auto;
+}
 
 /*--------------------------------------------------------------
 # Programmes
