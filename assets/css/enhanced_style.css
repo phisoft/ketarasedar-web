@@ -190,6 +190,12 @@
   color: #191919;
 }
 
+.sedar h2 {
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
 .programmes h2 {
   font-family: "Poppins", sans-serif;
   text-transform: capitalize;
@@ -287,7 +293,7 @@
 }
 
 .contact {
-  background-color: #cee5d0;
+  
 }
 
 .contact h2 {
@@ -318,7 +324,7 @@
 }
 
 #footer {
-  background-color: #f9f7fa;
+  background-color: #cee5d0;
   color: black;
   padding-top: 35px;
 }
