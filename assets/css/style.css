@@ -722,17 +722,13 @@ section {
 # Ketara Sedar
 --------------------------------------------------------------*/
 .sedar .courses-slider {
+  position: relative; /* add a new stacking context for the container */
+  overflow: hidden;
   width: 100%;
-  max-width: 400px; /* set a maximum width to limit the size of the slider */
-  margin: 0 auto; /* center the slider horizontally */
+  max-width: 400px;
+  margin: 0;
+  float: left; /* align to the left */
 }
-
-.sedar .courses-carousel {
-  width: 100%;
-  max-width: 250px; /* set a maximum width to limit the size of the carousel */
-  margin: 0 auto; /* center the carousel horizontally */
-}
-
 
 .sedar .courses-item {
   text-align: center;
@@ -740,14 +736,10 @@ section {
 }
 
 .sedar .courses-item .courses-img {
-  width: 100px;
+  width: 400px;
+  height: auto;
   border: 6px solid rgba(255, 255, 255, 0.15);
   margin: 0 auto;
-}
-
-.courses-img {
-  width: 60%;
-  height: auto;
 }
 
 
@@ -789,37 +781,37 @@ section {
   color: #eee;
 }
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   .courses .courses-item p {
-    width: 80%;
-  }
-}
-
-@media (max-width: 768px) {
-  .courses-img {
     width: 100%;
   }
+  
+  .courses-img {
+    max-width: 100%;
+    height: auto;
+  }
+  
 }
+
 .sedar .swiper-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   margin-top: 20px;
-  position: relative;
+  z-index: 1; /* bring the pagination to the front */
 }
 
 .sedar .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #a1bdd1;
+  background-color: #cee5d0;
   opacity: 0.5;
 }
 
 .sedar .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #39718d;
+  background-color: #979756;
   opacity: 1;
-}
-
-.courses-img {
-  width: 60%;
-  height: auto;
 }
 
 /*--------------------------------------------------------------
