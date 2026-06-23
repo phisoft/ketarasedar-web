@@ -1,222 +1,128 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*--------------------------------------------------------------
+# APAM — Enhanced Styles
+# Supplementary styles for the redesigned APAM website
+--------------------------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("animation.css");
 
+/* ===== Typography Overrides ===== */
+h1, h2, h3, h4, h5, h6,
+.navbar a,
+.btn-get-started,
+.section-title h2,
+.about__container h1 {
+  font-family: 'Poppins', sans-serif;
+}
+
+body, p, ul, li, a {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  text-transform: none;
+}
+
+/* ===== Navbar Active State ===== */
 .navbar a:hover,
 .navbar .active,
 .navbar li:hover > a {
-  color: #3f731a;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 10px;
+  color: var(--color-primary);
 }
 
+/* ===== Back to Top Arrow ===== */
 .upArrow i {
-  color: #0b2e06;
-  transition: 0.2s ease-in-out;
+  font-size: 1.4rem;
+  color: #fff;
+  transition: transform 0.2s ease;
 }
 
 .upArrow i:hover {
-  transform: translate(0, -30%);
+  transform: translateY(-3px);
+}
+
+/* ===== Language Switcher ===== */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 16px;
+  padding: 4px 8px;
+  background: var(--color-section-alt);
+  border-radius: var(--radius-full);
+}
+
+.lang-switcher .lang-link {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.lang-switcher .lang-link.active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.lang-switcher .lang-link:not(.active):hover {
+  color: var(--color-primary);
+  background: rgba(27, 94, 59, 0.08);
+}
+
+.lang-switcher .lang-divider {
+  color: var(--color-border);
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+@media (max-width: 991px) {
+  .lang-switcher {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    margin-left: 0;
+  }
+}
+
+/* ===== Hero Text Polish ===== */
+#hero .carousel-content h2 {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 #hero .carousel-content {
-  -webkit-backdrop-filter: blur(5px);
-  border: none;
-  position: relative;
-  height: 160px;
-  padding: 30px;
+  background: rgba(20, 72, 45, 0.55);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  padding: 28px 36px;
+  color: #fff;
 }
 
-@media (min-width:991px) {
-  #hero .carousel-content {
-    -webkit-backdrop-filter: blur(5px);
-    border: none;
-    position: relative;
-    height: 100px;
-    padding: 30px;
-  }
-  
-}
-
-#hero .btn-get-started {
-  transition: 0.2s ease-in-out;
-  position: relative;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: fit-content;
-  background-color: #1bbd36;
-  bottom: -30px;
-  font-weight: 700;
-  font-size: 15px;
-  padding: 12px;
-  border: none;
-  transition: 0.3s ease-in-out;
-}
-
-@media (min-width:991px) {
-  #hero .btn-get-started {
-    transition: 0.2s ease-in-out;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    background-color: #1bbd36;
-    bottom: -30px;
-    font-weight: 700;
-    font-size: 15px;
-    padding: 12px;
-    border: none;
-    transition: 0.3s ease-in-out;
-  }
-}
-
-#hero .btn-get-started:hover {
-  transform: translate(0, -10%);
-}
-
-.about__container {
-  text-align: center;
-}
-
-.about__container h1 {
-  font-weight: 700;
-  font-size: 30px;
-  margin-bottom: 100px;
-}
-
-.about__container .row {
-  text-align: left;
-  justify-content: center;
-  display: flex;
-}
-
-.about__container .row img {
-  margin: 0;
-}
-
-@media (max-width: 990px) {
-  .about__container .row {
-    text-align: center;
-  }
-
-  .about__container .row .list {
-    text-align: left;
-  }
-
-  .about__container .row img {
-    height: 200px;
-  }
-}
-
-.about__container .list {
-  display: flex;
-  width: fit-content;
-  margin-left: 30px;
-}
-
-.objectives {
-  background-color: #cee5d0;
-  display: flex;
-}
-
-.objectives .row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.objectives .objective__container {
-  width: 400px;
-  display: inline-block;
-  height: 300px;
-}
-
-.objectives h2 {
-  font-family: "Poppins", sans-serif;
-  background-color: #cee5d0;
-  text-transform: capitalize;
-  font-weight: 700;
-}
-
+/* ===== Objectives Hover Polish ===== */
 .objectives .icon-box {
-  padding: 20px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: start;
-  align-items: center;
-  text-align: center;
-  height: 250px;
-  transition: 0.35s ease-in-out;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  cursor: default;
 }
 
-.objectives .icon-box h4 {
-  font-weight: 500;
-  font-size: 18px;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  text-transform: none;
-  transition: 0.35s ease-in-out;
-}
-
-.objectives .icon-box .icon {
-  background-color: white;
-  margin: 0;
-  max-width: 50px;
-  min-width: 50px;
-
-  transition: 0.35s ease-in-out;
-}
-
-.objectives .icon-box:hover {
-  background-color: #faf1e6;
-  padding: 20px;
-  margin-top: -20px;
-}
-
-.objectives .icon-box:hover .icon {
-  background-color: #faf1e6;
-  color: #191919;
-}
-
-.objectives .icon-box:hover h4 {
-  color: #191919;
-}
-
-.sedar h2 {
-  font-family: "Poppins", sans-serif;
-  text-transform: capitalize;
-  font-weight: 700;
-}
-
-.programmes h2 {
-  font-family: "Poppins", sans-serif;
-  text-transform: capitalize;
-  font-weight: 700;
-}
-
+/* ===== Programme Tab Cards ===== */
 .programmes .programme-box a {
   border: 0;
-  box-shadow: 0 16px 40px rgba(112, 144, 176, 0.25);
-  transition: 0.3s ease-in-out;
-}
-.programmes .programme-box h4 {
-  font-family: "Poppins", sans-serif;
-  text-transform: capitalize;
-  font-size: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
 }
 
-.programmes .nav-tabs{
-  display: flex;
-  
+.programmes .programme-box h4 {
+  font-family: 'Poppins', sans-serif;
+  text-transform: none;
+  font-size: 0.9rem;
 }
+
+.programmes .nav-tabs {
+  display: flex;
+}
+
 .programmes .nav-tabs li {
   display: flex;
   flex: 1;
@@ -224,7 +130,7 @@
   align-items: center;
 }
 
-.programmes .nav-tabs li  a {
+.programmes .nav-tabs li a {
   flex: 1;
 }
 
@@ -234,18 +140,18 @@
   justify-content: center;
   margin: 6px;
   align-items: center;
-  min-height: 160px;
-  
+  min-height: 140px;
 }
+
 .programmes .nav-link.active {
   color: white;
-  background-color: #ff616d;
+  background-color: var(--color-primary);
 }
 
 .programmes .programme-box a:hover {
   color: white;
-  background-color: #ff616d;
-  transform: translate(0, -15%);
+  background-color: var(--color-primary);
+  transform: translateY(-4px);
 }
 
 .programmes .nav-link.active:hover {
@@ -254,108 +160,102 @@
 
 .programmes #tab-1 h3 {
   font-weight: 700;
-  font-size: 25px;
+  font-size: 1.4rem;
 }
 
-.programmes .tab-pane {
-  animation: enhanced-fade 0.5s ease-in-out;
-  z-index: 1;
-}
-
-.programmes #tab-1 .imageDiv {
-  box-shadow: 0 16px 40px rgba(112, 144, 176, 0.25);
-  padding: 20px;
-}
-
-.programmes .nav-link h4 {
-  display: flex;
-  height: 100%;
-}
-
-.programmes .desktop-show {
-  display: block;
-}
-
-.programmes .mobile-show {
-  display: none;
-}
-
-@media (max-width: 700px) {
-  .programmes .mobile-show {
-    display: block;
-  }
-  .programmes .desktop-show {
-    display: none;
-  }
-  .programmes .nav-link h4 {
-    font-size: 12px;
-  }
-}
-
-.contact {
-  
-}
-
-.contact h2 {
-  font-family: "Poppins", sans-serif;
-  text-transform: capitalize;
-  font-weight: 700;
-}
-
+/* ===== Contact Card Enhancements ===== */
 .contact .info-box {
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
-  transition: 0.35s ease-in-out;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: all 0.35s ease;
   min-height: 200px;
 }
 
 .contact .info-box:hover {
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
-  margin-top: -20px;
-  background-color: #faf1e6;
-  color: black;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  margin-top: -6px;
 }
 
-.contact .info-box h3 {
-  transition: 0.3s ease-in-out;
+.contact .info-box a:hover {
+  color: var(--color-primary);
 }
 
-.contact .info-box:hover h3 {
-  color: black;
-}
-
+/* ===== Footer Enhancements ===== */
 #footer {
-  background-color: #cee5d0;
-  color: black;
-  padding-top: 35px;
+  background-color: var(--color-primary-dark);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 #footer h4 {
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
-#footer .footer-top .social-links ul a {
-  color: black;
-}
-
+#footer .footer-top .social-links ul a,
 #footer .footer-top .footer-links ul a {
-  color: black;
+  color: rgba(255, 255, 255, 0.75);
 }
 
-/* Change default font */
-h1,
-h2,
-h3,
-h4,
-ul,
-li,
-p {
-  font-family: "Poppins", sans-serif;
+#footer .footer-top .social-links ul a:hover,
+#footer .footer-top .footer-links ul a:hover {
+  color: var(--color-accent);
 }
 
-h1,
-h2,
-h3,
-h4 {
-  text-transform: capitalize;
+/* ===== Section Background Alternation ===== */
+.about {
+  background: var(--color-surface);
+}
+
+.objectives {
+  background: var(--color-section-alt);
+}
+
+.sedar {
+  background: var(--color-surface);
+}
+
+.programmes {
+  background: var(--color-section-alt);
+}
+
+.contact {
+  background: var(--color-surface);
+}
+
+/* ===== Responsive Refinements ===== */
+@media (max-width: 992px) {
+  .about__container .row {
+    text-align: center;
+  }
+
+  .about__container .row .list {
+    text-align: left;
+  }
+
+  .about__container .row img {
+    max-height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .programmes .mobile-show {
+    display: block;
+  }
+
+  .programmes .desktop-show {
+    display: none;
+  }
+
+  .programmes .nav-link h4 {
+    font-size: 0.78rem;
+  }
+}
+
+/* ===== Accessibility ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
